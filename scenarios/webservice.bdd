@@ -1,0 +1,34 @@
+
+
+SCENARIO: addAnItemToCartAndUpdateCart
+META-DATA: {"enabled":false, "description":"add an item into cart and update cart","groups":["SMOKE"]}
+	
+	Given customer register as new user
+	When adds an item into cart
+	Then verify item presence in cart
+	When update the cart quantity by '5' for existing product
+	Then verify quantity of an item in cart
+	When delete product from cart
+	Then cart should be empty
+END
+
+
+SCENARIO: addAnItemToCartAndUpdateCart
+META-DATA: {"enabled":false, "description":"add an item into cart and update cart","groups":["SMOKE"]}
+	
+	Given customer register as new user
+	When adds an item into cart
+	Then verify item presence in cart
+	When add shipping address   
+	Then verify addres added
+	When add payment details
+	And place order
+	Then verifies ordered placed
+END
+
+SCENARIO: addAnItemToCartAndUpdateCart
+META-DATA: {"description":"add an item into cart and update cart","groups":["SMOKE"]}
+	
+	Given customer login with valid credentials
+	
+END
